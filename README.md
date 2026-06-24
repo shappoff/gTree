@@ -4,7 +4,8 @@
 
 ## Демо
 
-После деплоя сайт доступен на GitHub Pages: `https://<username>.github.io/g-tree/`
+После деплоя сайт доступен на GitHub Pages: `https://<username>.github.io/<repo>/`  
+Для репозитория `shappoff/gTree`: `https://shappoff.github.io/gTree/`
 
 ## Локальный запуск
 
@@ -38,9 +39,13 @@ npm run preview
 
 ## Деплой на GitHub Pages
 
-1. Создайте репозиторий `g-tree` на GitHub
-2. В **Settings → Pages → Build and deployment** выберите **GitHub Actions**
-3. Запушьте код в ветку `main` — workflow `.github/workflows/deploy.yml` соберёт и задеплоит сайт
+1. Запушьте код в ветку `main`
+2. Откройте **Settings → Pages → Build and deployment**
+3. В поле **Source** выберите **GitHub Actions** (не «Deploy from a branch»)
+4. Перезапустите workflow: **Actions → Deploy to GitHub Pages → Re-run all jobs**
+
+> Ошибка `Failed to create deployment (status: 404)` означает, что Pages ещё не включён  
+> или источник не установлен в **GitHub Actions**. После включения деплой пройдёт при повторном запуске.
 
 ## Стек
 
